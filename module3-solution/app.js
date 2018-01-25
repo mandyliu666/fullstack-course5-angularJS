@@ -30,7 +30,9 @@
 		menu.found = [];
 
 		menu.getItems = function () {
-			menu.found =  MenuSearchService.getMatchedMenuItems(menu.searchTerm);
+			if(menu.searchTerm.length !== 0) {
+				menu.found =  MenuSearchService.getMatchedMenuItems(menu.searchTerm);
+			}
 		}
 		menu.removeItem = function (index) {
 			menu.found.splice(index, 1); 
