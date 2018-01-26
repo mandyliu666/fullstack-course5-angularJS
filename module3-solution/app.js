@@ -20,10 +20,6 @@
 		return ddo;
 	}
 
-	function foundItemsDirectiveController () {
-		
-	}
-
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController (MenuSearchService) {
 		var menu = this;
@@ -51,14 +47,14 @@
 			})
 			.then(
 				function (result) {
-					var foundItems = [];
+					var found = [];
 					var items = result.data.menu_items;
 					for(var item in items) {
 						if(items[item].description.indexOf(searchTerm) !== -1) {
-							foundItems.push(items[item]);
+							found.push(items[item]);
 						}
 					}
-					return foundItems;
+					return found;
 				}
 			);
 		}
