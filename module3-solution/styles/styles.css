@@ -50,9 +50,11 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
-li.ng-binding.ng-scope {
+ol {
   margin-top: 100px;
-  text-align: left;
-  margin-top: 5px;
   padding-left: 10px;
+}
+li.ng-binding.ng-scope {
+  margin-top: 5px;
+  text-align: left;
 }
