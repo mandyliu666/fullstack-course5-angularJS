@@ -32,11 +32,10 @@
 		menu.found = [];
 
 		menu.getItems = function () {
-			if(menu.searchTerm.length !== 0) {
-				menu.found = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
-				console.log(menu.searchTerm);
-				console.log(menu.found);
-			}
+			MenuSearchService.getMatchedMenuItems(menu.searchTerm)
+	        .then(function (response) {
+	            menu.found = response;
+	        })
 		}
 		menu.removeItem = function (index) {
 			menu.found.splice(index, 1); 
@@ -52,18 +51,17 @@
 				method: "GET",
 				url: (ApiBasePath + "/menu_items.json")
 			})
-			.then(
-				function (result) {
-					var found = [];
-					var items = result.data.menu_items;
-					for(var item in items) {
-						if(items[item].description.indexOf(searchTerm) !== -1) {
-							found.push(items[item]);
-						}
+			.then(function (result) {
+				var found = [];
+				if(searchTerm.length == 0) return found;
+				var items = result.data.menu_items;
+				for(var item in items) {
+					if(items[item].description.indexOf(searchTerm) !== -1) {
+						found.push(items[item]);						
 					}
-					return found;
 				}
-			);
+				return found;
+			});
 		}
 	}
 })();
