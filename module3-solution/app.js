@@ -52,9 +52,10 @@
 			.then(
 				function (result) {
 					var foundItems = [];
-					for(item in result["menu_items"]) {
-						if(item["description"].indexOf(searchTerm) !== -1) {
-							foundItems.push(item);
+					var items = result.data.menu_items;
+					for(var item in items) {
+						if(items[item].description.indexOf(searchTerm) !== -1) {
+							foundItems.push(items[item]);
 						}
 					}
 					return foundItems;
