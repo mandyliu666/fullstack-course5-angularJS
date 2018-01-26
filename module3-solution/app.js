@@ -20,6 +20,10 @@
 		return ddo;
 	}
 
+	function foundItemsDirectiveController () {
+		
+	}
+
 	NarrowItDownController.$inject = ['MenuSearchService'];
 	function NarrowItDownController (MenuSearchService) {
 		var menu = this;
