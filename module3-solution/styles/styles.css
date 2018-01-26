@@ -5,6 +5,9 @@ input[type="text"] {
   width: 200px;
   float: left;
 }
+.ng-isolate-scope {
+  margin-top: 100px;
+}
 .narrow-button {
   float: left;
   margin-left: 10px;
