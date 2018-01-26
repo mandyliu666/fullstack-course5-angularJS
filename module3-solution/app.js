@@ -33,7 +33,9 @@
 
 		menu.getItems = function () {
 			if(menu.searchTerm.length !== 0) {
-				menu.found =  MenuSearchService.getMatchedMenuItems(menu.searchTerm);
+				menu.found = MenuSearchService.getMatchedMenuItems(menu.searchTerm);
+				console.log(menu.searchTerm);
+				console.log(menu.found);
 			}
 		}
 		menu.removeItem = function (index) {
