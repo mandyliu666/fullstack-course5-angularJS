@@ -2,7 +2,7 @@
 	'use restrict';
 
 	angular.module('MenuApp')
-	.component('categoriesList', {
+	.component('categories', {
 		templateUrl: 'categories.template.html',
 		bindings: {
 			categories: '<'

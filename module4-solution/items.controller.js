@@ -4,11 +4,9 @@
 	angular.module('MenuApp')
 	.controller('ItemsController', ItemsController);
 
-	ItemsController.$inject = ['items', 'categorySelected'];
-	function ItemsController (items, categorySelected) {
+	ItemsController.$inject = ['items'];
+	function ItemsController (items) {
 		var ctrlr = this;
-
-		ctrlr.categorySelected = categorySelected;
-		ctrlr.items = items.data.menu_items;
+		ctrlr.items = items;
 	}
 })();
