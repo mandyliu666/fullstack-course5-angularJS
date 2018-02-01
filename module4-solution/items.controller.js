@@ -9,6 +9,6 @@
 		var ctrlr = this;
 
 		ctrlr.categorySelected = categorySelected;
-		ctrlr.allItems = items.data.menu_items;
+		ctrlr.items = items.data.menu_items;
 	}
 })();

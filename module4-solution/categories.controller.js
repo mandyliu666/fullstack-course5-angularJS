@@ -8,6 +8,6 @@
 	function CategoriesController (MenuDataService, categories) {
 		var ctgrs = this;
 
-		ctgrs.allCategories = categories.data;
+		ctgrs.categories = categories.data;
 	}
 })();
