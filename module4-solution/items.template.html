@@ -1,6 +1,6 @@
 <h3>Items of category: {{ ItemsController.categoryId }}</h3>
 <ol>
-	<li ng-repeat="item in ItemsController.items">
+	<li ng-repeat="item in ItemsController.allItems">
 		<strong><h3>{{ item.short_name }}</h3> {{ item.name }}:</strong> {{ item.description }}
 	</li>
 </ol>
