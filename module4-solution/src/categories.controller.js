@@ -1,5 +1,5 @@
 (function () {
-	'use restrict';
+	'use strict';
 
 	angular.module('MenuApp')
 	.controller('CategoriesController', CategoriesController);
