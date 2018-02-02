@@ -11,11 +11,11 @@
 		$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: '/fullstack-course5-angularJS/module4-solution/home.template.html'
+			templateUrl: 'src/template/home.template.html'
 		})
 		.state('categories', {
 			url: '/categories',
-			templateUrl: '/fullstack-course5-angularJS/module4-solution/categories.template.html',
+			templateUrl: 'src/template/categories.template.html',
 			controller: 'CategoriesController as ctgrController',
 			resolve: {
 				categories: ['MenuDataService', function (MenuDataService) {
@@ -28,7 +28,7 @@
 		})
 		.state('categories.items', {
 			url: '/items/{categoryId}',
-			templateUrl: '/fullstack-course5-angularJS/module4-solution/items.template.html',
+			templateUrl: 'src/template/items.template.html',
 			controller: 'ItemsController as itmController',
 			resolve: {
 				items: ['$stateParams', 'MenuDataService', 
