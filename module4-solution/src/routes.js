@@ -27,7 +27,7 @@
 			}
 		})
 		.state('items', {
-			url: '/items/{categoryId}',
+			url: '/items/{category}',
 			templateUrl: 'src/template/items.template.html',
 			controller: 'ItemsController as itmController',
 			resolve: {
