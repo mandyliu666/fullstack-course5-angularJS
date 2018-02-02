@@ -8,6 +8,6 @@
 	function CategoriesController (categories) {
 		var ctgrs = this;
 
-		ctgrs.categories = categories.data;
+		ctgrs.categories = categories;
 	}
 })();
