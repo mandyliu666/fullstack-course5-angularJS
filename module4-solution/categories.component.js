@@ -3,7 +3,7 @@
 
 	angular.module('MenuApp')
 	.component('categories', {
-		templateUrl: '/module4-solution/categorieslist.template.html',
+		templateUrl: '/fullstack-course5-angularJS/module4-solution/categorieslist.template.html',
 		bindings: {
 			categories: '<'
 		}
